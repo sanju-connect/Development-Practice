@@ -25,3 +25,14 @@ do {
 
 } while (condition);
 
+
+let array = [1, 93, 5, 6, 88];
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  console.log(element);
+}
+
+array.forEach((value, index, arr) => {
+  console.log(value, index, arr);
+});
