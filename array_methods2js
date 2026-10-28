@@ -1,0 +1,55 @@
+const prices = [100, 200, 300];
+
+const updatePrices = prices.map(price => price * 1.1);
+
+console.log(updatePrices);
+
+const names = ["sanju", "asha", "rahul"];
+
+const cn = names.map(
+  name => name[0].toUpperCase() + name.slice(1)
+);
+
+console.log(names);
+
+
+const students = [
+  {name: "Asha", score: 72},
+  {name: "Ravi", score: 88},
+  {name: "Mina", score: 88}
+];
+
+const student = students.find(student => student.score == 88);
+
+console.log(student);
+
+const scores = [45, 82, 67, 91, 38];
+
+const hasPerfectScore = scores.some(score => score == 100);
+
+const products = [
+  { name: "Keyboard", price: 1500, inStock: true },
+  { name: "Mouse", price: 700, inStock: false },
+  { name: "Monitor", price: 12000, inStock: true },
+  { name: "USB Cable", price: 300, inStock: true }
+];
+
+function getProductSummary(products) {
+  const availableProducts = products.map(product => product.inStock).map(product => product.name);
+
+  const affordableCount = products.filter(product => product.price < 2000).length;
+
+  const hasExpensiveProduct = products.some(product => product > 10000);
+
+  return {
+    availableProducts: availableProducts,
+    affordableCount: affordableCount,
+    hasExpensiveProduct: hasExpensiveProduct
+  }
+}
+
+const summary = getProductSummary(products);
+
+console.log(summary.affordableCount);
+console.log(summary.availableProducts);
+console.log(summary.hasExpensiveProduct);
