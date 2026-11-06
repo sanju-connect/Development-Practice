@@ -1,4 +1,4 @@
-let array = [1, 93, 5, 6, 88];
+let array = [1, 1000, 5, 6, 98];
 
 for (let index = 0; index < array.length; index++) {
   const element = array[index];
@@ -41,4 +41,4 @@ let sum = (a, b)=>{
 
 console.log(n.reduce(sum));
 
-Array.from("Sanju");
+Array.from("sanjay");
